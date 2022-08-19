@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th>id</th>
+                <th>タイトル</th>
                 <th>TODO</th>
             </tr>
         </thead>
@@ -16,6 +17,7 @@
             @foreach ($todos as $todo)
             <tr>
                 <td>{!! link_to_route('todos.show', $todo->id, ['id' => $todo->id]) !!}</td>
+                <td>{{ $todo->title }}</td>
                 <td>{{ $todo->content }}</td>
             </tr>
             @endforeach

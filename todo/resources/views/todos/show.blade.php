@@ -10,6 +10,10 @@
             <td>{{ $todo->id }}</td>
         </tr>
         <tr>
+            <th>タイトル</th>
+            <td>{{ $todo->title }}</td>
+        </tr>
+        <tr>
             <th>メッセージ</th>
             <td>{{ $todo->content }}</td>
         </tr>
