@@ -44,6 +44,10 @@ class TodosController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'content' => 'required|max:191',
+        ]);
+        
         $todo = new Todo;
         $todo->content = $request->content;
         $todo->save();
@@ -90,6 +94,10 @@ class TodosController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'content' => 'required|max:191',
+        ]);
+        
         $todo = Todo::find($id);
         $todo->content = $request->content;
         $todo->save();
