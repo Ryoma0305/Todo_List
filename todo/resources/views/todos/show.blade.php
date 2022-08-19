@@ -10,11 +10,11 @@
             <td>{{ $todo->id }}</td>
         </tr>
         <tr>
-            <th>タイトル</th>
+            <th>TODO</th>
             <td>{{ $todo->title }}</td>
         </tr>
         <tr>
-            <th>メッセージ</th>
+            <th>内容</th>
             <td>{{ $todo->content }}</td>
         </tr>
     </table>

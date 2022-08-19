@@ -15,7 +15,7 @@ class TodosController extends Controller
      */
     public function index()
     {
-        $todos = Todo::all();
+        $todos = Todo::paginate(25);
         
         return view('todos.index', [
             'todos' => $todos,
@@ -102,7 +102,7 @@ class TodosController extends Controller
         ]);
         
         $todo = Todo::find($id);
-        $message->title = $request->title;
+        $todo->title = $request->title;
         $todo->content = $request->content;
         $todo->save();
         

@@ -9,12 +9,12 @@
             {!! Form::model($todo, ['route' => ['todos.update', $todo->id], 'method' => 'put']) !!}
                 
                 <div class="form-group">
-                    {!! Form::label('title', 'タイトル:') !!}
+                    {!! Form::label('title', 'TODO:') !!}
                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('content', 'メッセージ:') !!}
+                    {!! Form::label('content', '内容:') !!}
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
                 </div>
         
